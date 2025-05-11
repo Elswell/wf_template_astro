@@ -1,0 +1,13 @@
+---
+import "@styles/globals.scss";
+import Layout from "@layouts/Layout.astro";
+import Example from "@components/Example.astro";
+import Slider from "@blocks/Slider";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Example />
+    <Slider client:load />
+  </main>
+</Layout>

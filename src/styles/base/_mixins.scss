@@ -1,0 +1,23 @@
+/* -----------
+Media mixins
+----------- */
+
+@mixin min($pixels) {
+  @media (min-width: $pixels) {
+    @content;
+  }
+}
+
+@mixin max($pixels) {
+  @media (max-width: $pixels) {
+    @content;
+  }
+}
+
+/* -----------
+Transitions
+----------- */
+
+@mixin tra($duration: 0.5s) {
+  transition: all $duration;
+}

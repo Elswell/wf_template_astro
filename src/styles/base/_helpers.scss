@@ -1,0 +1,41 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: $bg;
+  min-height: 100vh;
+}
+
+section {
+  padding: 0 1.4rem;
+
+  @include min(1600px) {
+    padding: 0;
+  }
+}
+
+a {
+  @include tra();
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.cont {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}

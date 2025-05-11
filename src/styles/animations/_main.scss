@@ -1,0 +1,104 @@
+/* -----------
+Keyframes
+----------- */
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* -----------
+Mixins
+----------- */
+
+@mixin fadeInUp($duration) {
+  animation: fadeInUp $duration ease-in-out both;
+}
+
+@mixin fadeInRight($duration) {
+  animation: fadeInRight $duration ease-in-out both;
+}
+
+@mixin fadeInLeft($duration) {
+  animation: fadeInLeft $duration ease-in-out both;
+}
+
+@mixin fadeInBottom($duration) {
+  animation: fadeInBottom $duration ease-in-out both;
+}
+
+@mixin fadeIn($duration) {
+  animation: fadeIn $duration ease-in-out both;
+}
+
+/* -----------
+Classes
+----------- */
+
+.an_totop {
+  @include fadeInUp(0.5s);
+}
+
+.an_totop {
+  @include fadeInBottom(0.5s);
+}
+
+.an_toright {
+  @include fadeInRight(0.5s);
+}
+
+.an_toleft {
+  @include fadeInLeft(0.5s);
+}
+
+.an_fade {
+  @include fadeIn(0.5s);
+}
