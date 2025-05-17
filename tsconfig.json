@@ -5,13 +5,14 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@blocks/*": ["src/blocks/*"],
-      "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"],
-      "@styles/main/*": ["src/styles/main/"],
-      "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"]
+      "@/components/*": ["src/components/*"],
+      "@/blocks/*": ["src/blocks/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/helpers/*": ["src/helpers/*"]
     }
   }
 }

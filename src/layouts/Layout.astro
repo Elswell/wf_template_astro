@@ -1,4 +1,6 @@
 ---
+import Footer from "@blocks/Footer.astro";
+import Header from "@blocks/Header.astro";
 import "@styles/globals.scss";
 
 interface Props {
@@ -19,7 +21,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
     <script src="src/assets/js/webfactor_main.ts"></script>
   </body>
 </html>

@@ -12,10 +12,13 @@
   },
   "dependencies": {
     "@astrojs/preact": "^3.1.2",
+    "@fancyapps/ui": "^5.0.36",
     "@studio-freight/lenis": "^1.0.42",
     "astro": "^4.5.10",
     "gsap": "^3.12.5",
     "keen-slider": "^6.8.6",
+    "leaflet": "^1.9.4",
+    "leaflet-gesture-handling": "^1.2.2",
     "sass": "^1.72.0"
   },
   "devDependencies": {
