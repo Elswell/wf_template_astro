@@ -19,7 +19,8 @@
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
     "leaflet-gesture-handling": "^1.2.2",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "vanilla-lazyload": "^11.0.6"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

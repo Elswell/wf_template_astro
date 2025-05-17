@@ -1,0 +1,52 @@
+---
+// LazyFigure.astro
+interface ImageSize {
+  url: string;
+  width?: number;
+  media?: string;
+}
+
+interface Props {
+  alt?: string;
+  caption?: string;
+  sizes: ImageSize[];
+  fallbackSrc: string;
+  noscript?: boolean;
+  imgProps?: Record<string, any>;
+}
+
+const {
+  alt = "",
+  caption,
+  sizes,
+  fallbackSrc,
+  noscript = true,
+  imgProps = {},
+} = Astro.props;
+---
+
+<figure itemscope itemtype="http://schema.org/ImageObject">
+  <picture>
+    {
+      sizes.map((size) => (
+        <source data-srcset={size.url} media={size.media} width={size.width} />
+      ))
+    }
+    <img data-src={fallbackSrc} alt={alt} {...imgProps} />
+  </picture>
+
+  {
+    noscript && (
+      <noscript>
+        <picture>
+          {sizes.map((size) => (
+            <source srcset={size.url} media={size.media} width={size.width} />
+          ))}
+          <img src={fallbackSrc} alt={alt} {...imgProps} />
+        </picture>
+      </noscript>
+    )
+  }
+
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

@@ -6,7 +6,7 @@ import replace from "gulp-replace";
 
 gulp.task("svgSpriteBuild", () => {
   return gulp
-    .src(`./src/assets/images/icons/*.svg`)
+    .src(`./src/assets/icons/*.svg`)
     .pipe(
       svgmin({
         js2svg: {
