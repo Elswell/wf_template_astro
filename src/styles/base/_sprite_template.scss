@@ -1,0 +1,11 @@
+// Auto-generated sprite dimensions
+
+{{#shapes}}
+$i-{{name}}-width: {{width.outer}}px;
+$i-{{name}}-height: {{height.outer}}px;
+
+.i-{{name}} {
+  width: $i-{{name}}-width;
+  height: $i-{{name}}-height;
+}
+{{/shapes}}

@@ -27,15 +27,30 @@ gulp.task("svgSpriteBuild", () => {
     .pipe(replace("&gt;", ">"))
     .pipe(
       svgSprite({
+        shape: {
+          id: {
+            generator: "i-%s",
+          },
+        },
         mode: {
           symbol: {
-            rener: {
-              css: false,
-              scss: false,
-            },
-            dest: "./src/assets/images/",
-            sprite: "sprite.svg",
+            dest: ".",
+            sprite: "./public/sprite.svg",
+            example: false,
           },
+          css: {
+            render: {
+              scss: {
+                template: "./src/styles/base/_sprite_template.scss",
+                dest: "../../src/styles/base/_sprite.scss",
+              },
+            },
+            dest: ".",
+            sprite: "/public/sprite.svg",
+          },
+        },
+        variables: {
+          mapname: "i",
         },
       })
     )
