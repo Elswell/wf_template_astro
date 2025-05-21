@@ -1,12 +1,12 @@
 ---
 interface Props {
   id: string;
-  cl: string;
+  cl?: string;
 }
 
 const { id, cl = "" } = Astro.props;
 ---
 
-<svg class={cl}>
-  <use xlink:href={`/sprite.svg#${id}`}></use>
+<svg class={`i i-i-${id} ${cl}`}>
+  <use xlink:href={`/sprite.svg#i-${id}`}></use>
 </svg>

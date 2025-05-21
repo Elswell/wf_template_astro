@@ -23,7 +23,7 @@ section {
 a {
   @include tra();
   text-decoration: none;
-  color: $text-color;
+  color: #000;
 
   &:hover {
     color: $link-hover-color;

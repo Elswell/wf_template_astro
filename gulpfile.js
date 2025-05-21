@@ -42,7 +42,7 @@ gulp.task("svgSpriteBuild", () => {
             render: {
               scss: {
                 template: "./src/styles/base/_sprite_template.scss",
-                dest: "../../src/styles/base/_sprite.scss",
+                dest: "./src/styles/base/_sprite.scss",
               },
             },
             dest: ".",

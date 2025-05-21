@@ -1,0 +1,20 @@
+---
+interface Props extends astroHTML.JSX.ImgHTMLAttributes {
+  src: string;
+  alt?: string;
+  lazy?: boolean;
+}
+
+const { src, alt = "", lazy = true, ...rest } = Astro.props;
+---
+
+<>
+  <img {...rest} {...lazy ? { "data-src": src } : { src }} alt={alt} />
+  {
+    lazy && (
+      <noscript>
+        <img src={src} alt={alt} {...rest} />
+      </noscript>
+    )
+  }
+</>

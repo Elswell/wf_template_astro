@@ -1,5 +1,4 @@
-@import "./reset";
-@import "./variables";
-@import "./mixins";
-@import "./helpers";
-@import "./typography";
+@use "./reset";
+@use "./mixins";
+@use "./helpers";
+@use "./sprite";
